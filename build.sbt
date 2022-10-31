@@ -19,11 +19,3 @@ lazy val needsTestLibForBoth = (project in file("./needsTestLibForBoth"))
   .dependsOn(testLib % Test, testLib % IntegrationTest)
   .configs(IntegrationTest)
   .settings(Defaults.itSettings)
-
-lazy val root = (project in file("."))
-  .settings(
-    name := "test-lib-example",
-    libraryDependencies += scalaTest % Test
-  )
-
-// See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.
